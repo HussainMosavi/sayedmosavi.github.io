@@ -1,0 +1,15 @@
+L.marker([53.921, 9.516]).addTo(map);
+L.marker([53.921, 9.516])
+  .addTo(map)
+  .bindPopup("Itzehoe City Center");
+const points = [
+  {name: "Grundschule Itzehoe", coords: [53.923, 9.515]},
+  {name: "Bahnhof Itzehoe", coords: [53.923, 9.507]},
+  {name: "Klinikum Itzehoe", coords: [53.930, 9.517]},
+];
+
+points.forEach(p => {
+  L.marker(p.coords)
+    .addTo(map)
+    .bindPopup(`<b>${p.name}</b>`);
+});
