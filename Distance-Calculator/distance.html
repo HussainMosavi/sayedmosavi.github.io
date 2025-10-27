@@ -80,7 +80,7 @@
 
       // Call your Node.js API (make sure distanceServer.js is running)
       const qs = `latA=${encodeURIComponent(latA)}&lonA=${encodeURIComponent(lonA)}&latB=${encodeURIComponent(latB)}&lonB=${encodeURIComponent(lonB)}`;
-      const url = `https://distancecalc-lgn7.onrender.com`;
+      const url = `https://distancecalc-lgn7.onrender.com/?${qs}`;
 
       try {
         const res = await fetch(url, { method: "GET" });
@@ -98,4 +98,5 @@
   </script>
 </body>
 </html>
+
 
