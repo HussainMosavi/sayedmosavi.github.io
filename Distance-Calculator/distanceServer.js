@@ -36,6 +36,8 @@ http
     response.setHeader("Content-Type", "application/json");
     response.end(JSON.stringify({ distance: distance.toFixed(2) }));
   })
-  .listen(8080, () =>
-    console.log("✅ Server running at http://localhost:8080/")
-  );
+  .listen(process.env.PORT || 8080, "0.0.0.0", () =>
+  console.log(`✅ Server running on port ${process.env.PORT || 8080}`)
+);
+
+
